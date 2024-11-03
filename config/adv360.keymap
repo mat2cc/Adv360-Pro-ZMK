@@ -9,8 +9,8 @@
 
 #define QUICK_TAP_MS 175
 
-#define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LT6 LM0 LM1 LM2 LM3 LM4 LM5 LM6 LB0 LB1 LB2 LB3 LB4 LF5 LF6 LF0 LF1 LF2 LF3 LF4 LF5 LF6 LL0 LL1 LL2 LL3 LL4 LL5 LL6 // left hand
-#define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RT6 RM0 RM1 RM2 RM3 RM4 RM5 RM6 RB0 RB1 RB2 RB3 RB4 RF5 RF6 RF0 RF1 RF2 RF3 RF4 RF5 RF6 RL0 RL1 RL2 RL3 RL4 RL5 RL6 // right hand
+#define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LT6 LM0 LM1 LM2 LM3 LM4 LM5 LM6 LB0 LB1 LB2 LB3 LB4 LF5 LF6 LF0 LF1 LF2 LF3 LF4 LF5 LL0 LL1 LL2 LL3 LL4 // left hand
+#define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RT6 RM0 RM1 RM2 RM3 RM4 RM5 RM6 RB0 RB1 RB2 RB3 RB4 RF5 RF6 RF0 RF1 RF2 RF3 RF4 RF5 RL0 RL1 RL2 RL3 RL4 // right hand
 #define THUMBS LH5 LH4 LH3 LH2 LH1 LH0 RH0 RH1 RH2 RH3 RH4 RH5
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
@@ -28,13 +28,21 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 ZMK_LAYER(default_layer,
-        &kp EQUAL &kp N1    &kp N2    &kp N3   &kp N4     &kp N5 &tog 1                                                           &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB   &kp SEMI  &kp COMMA &kp DOT  &kp P      &kp Y  &none                                                            &none &kp F  &kp G  &kp C     &kp R    &kp L    &kp BSLH
-        &kp ESC   &kp A     &kp O     &kp E    &kp U      &kp I  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp D  &kp H  &kp T     &kp N    &kp S    &kp SQT
-        &kp LSHFT &kp QUOTE &kp Q     &kp J    &kp K      &kp X                            &kp HOME &kp PG_UP                           &kp B  &kp M  &kp W     &kp V    &kp Z    &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS  &kp LEFT &kp RIGHT                &kp SPACE &kp ENTER   &kp END  &kp PG_DN &kp ENTER &kp BSPC              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                           &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
 )
 
+// ZMK_LAYER(default_layer,
+//         &kp EQUAL &kp N1    &kp N2    &kp N3   &kp N4     &kp N5 &tog 1                                                           &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+//         &kp TAB   &kp SEMI  &kp COMMA &kp DOT  &kp P      &kp Y  &none                                                            &none &kp F  &kp G  &kp C     &kp R    &kp L    &kp BSLH
+//         &kp ESC   &kp A     &kp O     &kp E    &kp U      &kp I  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp D  &kp H  &kp T     &kp N    &kp S    &kp SQT
+//         &kp LSHFT &kp QUOTE &kp Q     &kp J    &kp K      &kp X                            &kp HOME &kp PG_UP                           &kp B  &kp M  &kp W     &kp V    &kp Z    &kp RSHFT
+//         &mo 2     &kp GRAVE &kp CAPS  &kp LEFT &kp RIGHT                &kp SPACE &kp ENTER   &kp END  &kp PG_DN &kp ENTER &kp BSPC              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+// )
+//
 // ZMK_LAYER(sym,
 //         &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &trans &trans &trans  &trans  &trans
 //         &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &trans &trans &trans  &trans  &trans
