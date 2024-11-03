@@ -4,8 +4,8 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
-#include "./keypos_adv360.h"
-// #include "../zmk-nodefree-config/helper.h"
+// #include "./keypos_adv360.h"
+#include "../zmk-nodefree-config/helper.h"
 
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 
