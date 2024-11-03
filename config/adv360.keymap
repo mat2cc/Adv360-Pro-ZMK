@@ -27,10 +27,10 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 ZMK_LAYER(default_layer,
-        &kp EQUAL &kp N1    &kp N2    &kp N3   &kp N4     &kp N5 &none                                                             &mo 4 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB   &kp SEMI  &kp COMMA &kp DOT  &kp P      &kp Y  &none                                                             &none &kp F  &kp G  &kp C     &kp R    &kp L    &kp BSLH
-        &kp ESC   &kp A     &kp O     &kp E    &kp U      &kp I  &none           &caps_word &kp LALT &kp LGUI  &mo 2               &none &kp D  &kp H  &kp T     &kp N    &kp S    &kp SQT
-        &kp LSHFT &kp QUOTE &kp Q     &kp J    &kp K      &kp X                             &kp HOME &kp PG_UP                           &kp B  &kp M  &kp W     &kp V    &kp Z    &kp RSHFT
+        &kp EQUAL &kp N1    &kp N2    &kp N3   &kp N4     &kp N5 &none                                                             &mo 4 &kp N6 &kp N7   &kp N8     &kp N9   &kp N0   &kp MINUS
+        &kp TAB   &kp SEMI  &kp COMMA &kp DOT  &kp P      &kp Y  &none                                                             &none &kp F  &kp G    &kp C      &kp R    &kp L    &kp BSLH
+        &kp ESC   &kp A     &kp O     &kp E    &kp U      &kp I  &none           &caps_word &kp LALT &kp LGUI  &mo 2               &none &kp D  &kp H    &kp T      &kp N    &kp S    &kp SQT
+        &kp LSHFT &kp APOS  &kp Q     &kp J    &kp K      &kp X                             &kp HOME &kp PG_UP                           &kp B  &kp M    &kp W      &kp V    &kp Z    &kp RSHFT
         &mo 3     &kp GRAVE &kp CAPS  &kp DOWN &kp UP                 &kp SPACE &kp ENTER   &kp END  &kp PG_DN &mo 1 &kp BSPC                   &kp LEFT &kp RIGHT  &kp LBKT &kp RBKT &mo 3
 )
 
